@@ -14,16 +14,23 @@ export default class Menu extends React.Component {
 		onPress("ArrowLeft", this.onLeft);
 	}
 	onRight(){
-		if (this.state.active === this.props.data.length - 1) return;
-		this.setState({active: this.state.active+1});
+		const {active} = this.state;
+		const {data} = this.props;
+		const newIdx = (active === data.length - 1) ? 0 : active + 1;
+		this.setState({active: newIdx});
 	}	
+
 	onLeft(){
-		if (this.state.active === 0) return;
-		this.setState({active: this.state.active-1});
-	}
+		const {active} = this.state;
+		const {data} = this.props;
+		const newIdx = (active === 0) ? data.length - 1 : active - 1;
+		this.setState({active: newIdx});
+	}	
+
 	thumbnails(){
 		const {data} = this.props;
 		const {active} = this.state;
+
 		return data.map( (g, i) => {
 			return (
 				<Thumbnail 
@@ -33,7 +40,7 @@ export default class Menu extends React.Component {
 					active={ i === active }
 					key={`thumbnail-${i}`}/>
 				);
-		});
+		})
 	}
 	render() {
 
