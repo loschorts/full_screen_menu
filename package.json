@@ -1,0 +1,33 @@
+{
+  "name": "full_screen_menu",
+  "version": "1.0.0",
+  "description": "a full screen menu in React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loschorts/full_screen_menu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loschorts/full_screen_menu/issues"
+  },
+  "homepage": "https://github.com/loschorts/full_screen_menu#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "promise-polyfill": "6.0.2",
+    "whatwg-fetch": "^2.0.2"
+  }
+}
