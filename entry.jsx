@@ -1,18 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { getGames } from './util/api';
+import Menu from './components/menu';
 
-import {onPress} from './util/on_press';
-
-const Root = () => {
-	return (
-		<div>
-			React
-		</div>
-	);
-}
-
-const logKeyPress = ({key}) => console.log(key);
-
-document.addEventListener("DOMContentLoaded", ()=>{
-	render(<Root/>, document.querySelector("#root"));
+document.addEventListener("DOMContentLoaded", () => {
+	getGames("04","20","2016").then(renderMenu);
 });
+
+const renderMenu = data => {
+	render(<Menu data={ data.games.game } />, document.querySelector("#root"));
+}

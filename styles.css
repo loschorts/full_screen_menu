@@ -1,0 +1,39 @@
+body {
+	background-image: url("http://mlb.mlb.com/mlb/images/devices/ballpark/1920x1080/1.jpg");
+	color: white;
+}
+
+.active img {	
+	transform: scale(1.25, 1.25);
+	border: 2px solid white;
+	padding: 1px;
+	margin: 10px;
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.thumbnail {
+	margin: 5px;
+}
+
+/*TODO: .thumbnail h1 centering is off, needs to be fixed*/
+
+.thumbnail h1 {
+	position: absolute;
+	transform: translate(-25%, -200%);
+}
+
+.thumbnail h2 {
+	position: absolute;
+}
