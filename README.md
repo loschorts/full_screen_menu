@@ -12,11 +12,12 @@ a full screen menu in React
 # Day 2
 -[x] Carousel *
 -[x] Thumbnail / Highlight *
+-[] Fix Off-Balance Carousel
 
 # Day 3
 -[] Testing
 -[] Styling
--[] DateSwitch *
+-[x] DateSwitch *
 -[] Detail *
 -[] Transitions
 

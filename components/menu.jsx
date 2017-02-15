@@ -45,7 +45,6 @@ export default class Menu extends React.Component {
 		return thumbs.rotate(active - parseInt(thumbs.length/2));
 	}
 	render() {
-		console.log(this.state.active, this.props.data)
 		return (
 			<div className="menu center">
 			{this.thumbnails()}

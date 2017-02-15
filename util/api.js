@@ -1,4 +1,5 @@
-// This could be better by handling errors.
+// This could be better by handling errors, especially where the date given is
+// valid but not supported by the API, ex. 01, 01, 1911.
 
 export const getGames = (mm,dd,yyyy) => new Promise(resolve => {
 	fetch(url(mm,dd,yyyy))
