@@ -3,16 +3,15 @@
 a full screen menu in React
 
 # Day 1
--[] Wireframes
--[] Configuration
--[] Root *
--[] API Util
--[] OnPress Util
+-[x] Wireframes
+-[x] Configuration
+-[x] Root *
+-[x] API Util
+-[x] OnPress Util
 
 # Day 2
--[] Carousel *
--[] Thumbnail *
--[] Highlight *
+-[x] Carousel *
+-[x] Thumbnail / Highlight *
 
 # Day 3
 -[] Testing

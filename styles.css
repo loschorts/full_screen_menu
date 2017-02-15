@@ -1,6 +1,7 @@
 body {
 	background-image: url("http://mlb.mlb.com/mlb/images/devices/ballpark/1920x1080/1.jpg");
 	color: white;
+	overflow: hidden;
 }
 
 .active img {	
@@ -24,7 +25,9 @@ body {
 }
 
 .thumbnail {
+	left: 0;
 	margin: 5px;
+	transition: left 1s linear;
 }
 
 /*TODO: .thumbnail h1 centering is off, needs to be fixed*/
