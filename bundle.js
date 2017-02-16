@@ -22248,7 +22248,7 @@ var getGames = exports.getGames = function getGames(mm, dd, yyyy) {
 };
 
 var url = function url(mm, dd, yyyy) {
-	return "http://gdx.mlb.com/components/game/mlb/year_" + (yyyy + "/month_" + mm + "/day_" + dd + "/master_scoreboard.json");
+	return "https://gdx.mlb.com/components/game/mlb/year_" + (yyyy + "/month_" + mm + "/day_" + dd + "/master_scoreboard.json");
 };
 
 /***/ }),

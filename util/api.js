@@ -23,6 +23,6 @@ export const getGames = (mm,dd,yyyy) => new Promise(resolve => {
 });
 
 const url = (mm,dd,yyyy) => (
- `http://gdx.mlb.com/components/game/mlb/year_` + 
+ `https://gdx.mlb.com/components/game/mlb/year_` + 
  `${yyyy}/month_${mm}/day_${dd}/master_scoreboard.json`
 );
