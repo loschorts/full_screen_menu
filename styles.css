@@ -12,8 +12,8 @@ body {
 }
 
 .thumbnail img {
-	max-width: 124px;
-	max-height: 70px;
+	width: 124px;
+	height: 70px;
 }
  
 #cursor {
@@ -58,13 +58,13 @@ body {
 
 /*TODO: .thumbnail h1 centering is off for even numbered games, needs to be fixed*/
 
-.thumbnail h1 {
+#carousel-header {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -200%);
 }
 
-.thumbnail h2 {
+#carousel-footer {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%);
@@ -85,11 +85,17 @@ body {
 	position: absolute;
 	height: 50vh;
 	width: 50vh;
-	padding: 10px;
+	padding: 20px;
 	background: #707070;
 	border-radius: 15px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
+	display: flex column;
+}
+
+#modal-content h1 {
+	text-align: center;
+	margin-top: 0px;
+}
+
+.broadcast-info {
+	max-width: 90%;
 }
