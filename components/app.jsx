@@ -34,7 +34,8 @@ class App extends React.Component {
 	getData(date = this.state.date) {
 		getGames(...parseDate(date)).then(games => {
 			const hasContent = (games.length > 0);
-			this.setState({games, date, hasContent}, ()=>{
+			const selected = hasContent ? this.state.selected : ["DateSelector", "Menu"]
+			this.setState({games, date, hasContent, selected}, ()=>{
 				this.state.hasContent ? this.attachKeyListeners() : this.detachKeyListeners();
 			});
 		});
