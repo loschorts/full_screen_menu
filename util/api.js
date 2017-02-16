@@ -2,7 +2,6 @@
 // valid but not supported by the API, ex. 01, 01, 1911.
 
 export const getGames = (mm,dd,yyyy) => new Promise(resolve => {
-	console.log(url(mm,dd,yyyy));
 	fetch(url(mm,dd,yyyy))
 	.then(r => r.json())
 	.then(json => {

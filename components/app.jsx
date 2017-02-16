@@ -46,7 +46,6 @@ class App extends React.Component {
 	}
 	render() {
 		const {date, games, selected, hasContent} = this.state;
-		console.log(date)
 		let content;
 		if (hasContent) {
 			content = <Menu data={games} selected={selected[0] === "Menu"}/>
