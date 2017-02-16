@@ -70,6 +70,19 @@ body {
 	transform: translate(-50%);
 }
 
+.offset {
+	transform: translate(calc(-50% - 62px), -50%);
+}
+
+.offset #carousel-header {
+	transform: translate(calc(-50% + 62px), -200%);
+
+}
+
+.offset #carousel-footer {
+	transform: translate(calc(-50% + 62px));
+}
+
 #modal {
 	position: absolute;
 	top: 50%;
