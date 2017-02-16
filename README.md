@@ -1,21 +1,33 @@
 # full_screen_menu
 
-a full screen menu in React
+A full screen carousel menu with date selector in React.
 
-# Day 1
+# To Run
+
+http://fullscreenmenu.surge.sh?date=5-20-2016
+
+http://fullscreenmenu.surge.sh
+
+**Keyboard-only:** Arrow Keys, Space/Enter
+
+# Timeline
+
+* React Component
+
+## Day 1
 -[x] Wireframes
 -[x] Environment Configuration
 -[x] Root *
 -[x] API Util
 -[x] OnPress Util
 
-# Day 2
+## Day 2
 -[x] Date util
 -[x] Controls
--[x] Carousel *
--[x] Thumbnail / Highlight *
--[x] DateSwitch *
--[x] Detail Modal*
+-[x] Menu *
+-[x] Thumbnail *
+-[x] DateSelector *
+-[x] Modal *
 -[x] cursor
 -[x] Cursor bug when menu not present
 -[x] large thumbnails bug (band-aid)
@@ -23,13 +35,11 @@ a full screen menu in React
 -[x] Testing
 -[x] Styling
 
-# Day 3
+## Day 3
 -[x] Off-Balance Carousel bug
 
 # Improvements
+-[] Cross-browser support
 -[] Transitions
--[] Reduxify game data, date
--[] Control scheme
-
-
-* React Component
+-[] Reduxify
+-[] Unified Control Scheme
