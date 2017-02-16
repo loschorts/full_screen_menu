@@ -1,7 +1,3 @@
-if (!URLSearchParams) {
-	window.URLSearchParams = require('url-search-params');
-}
-
 const ensureDigits = i => (i < 10 ? "0".concat(i.toString()) : i.toString());
 
 export const parseDate = date => ([
