@@ -3,10 +3,13 @@ import Thumbnail from './thumbnail';
 import onPress from '../util/on_press';
 import '../util/array';
 
+import GameModal from './game_modal';
+
 export default class Menu extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
+			modalOpen: false,
 			current: 0,
 		}
 	}
@@ -33,7 +36,7 @@ export default class Menu extends React.Component {
 	}
 
 	select(){
-		alert(this.props.data[this.state.current].awayTeamName)
+		this.setState({modalOpen: !this.state.modalOpen});
 	}
 
 	rotate(dir) {
@@ -66,11 +69,37 @@ export default class Menu extends React.Component {
 		return thumbs.rotate(current - parseInt(thumbs.length/2));
 	}
 	render() {
-		const {selected} = this.props;
+		const {data, selected} = this.props;
+		const {current} = this.state;
 		const selectedClass = selected ? "selected" : ""
+
+
+		let modalBody;
+		if (data.length > 0) {
+			const game = data[current].broadcast;
+			modalBody = (
+				<div class="broadcast-info">
+					<h2>Home</h2>
+					<p>Radio: {game.home.radio}</p>
+					<p>TV: {game.home.tv}</p>
+
+					<h2>Away</h2>
+					<p>Radio: {game.away.radio}</p>
+					<p>TV: {game.away.tv}</p>
+				</div>
+			)
+		} else {
+			modalBody = "";
+		}
+
 		return (
 			<div className={`media-menu menu center ${selectedClass}`}>
 			{this.thumbnails()}
+			<GameModal 
+				open={this.state.modalOpen}
+				header="Broadcast Options"
+				body={modalBody}
+				/>
 			</div>
 		);	
 	}

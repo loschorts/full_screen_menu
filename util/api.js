@@ -19,6 +19,7 @@ export const getGames = (mm,dd,yyyy) => new Promise(resolve => {
 					time: `${g.time} ${g.time_zone}`,
 					venue: g.venue,
 					thumbnail: g.video_thumbnails.thumbnail.filter( t => t.scenario === "7")[0].content,
+					broadcast: g.broadcast
 				};
 			});
 			resolve(data);
