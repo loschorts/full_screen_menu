@@ -39,7 +39,7 @@ http://fullscreenmenu.surge.sh
 (*) indicates React Component
 
 # Improvements
--[] Cross-browser support
--[] Transitions
--[] Reduxify
--[] Unified Control Scheme
+- [] Cross-browser support
+- [] Transitions
+- [] Reduxify
+- [] Unified Control Scheme
