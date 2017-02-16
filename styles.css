@@ -71,7 +71,7 @@ body {
 }
 
 .offset {
-	transform: translate(calc(-50% - 62px), -50%);
+	transform: translate(calc(-50% - 67px), -50%);
 }
 
 .offset #carousel-header {
