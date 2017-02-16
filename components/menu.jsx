@@ -66,7 +66,13 @@ export default class Menu extends React.Component {
 					key={`thumbnail-${i}`}/>
 				);
 		})
-		return thumbs.rotate(current - parseInt(thumbs.length/2));
+		const offset = thumbs.length % 2 == 0 ? "offset" : "";
+
+		return (
+			<div id="carousel" className={`center ${offset}`}>
+				{thumbs.rotate(current - parseInt(thumbs.length/2))}
+			</div>
+		);
 	}
 	render() {
 		const {data, selected} = this.props;
@@ -78,7 +84,7 @@ export default class Menu extends React.Component {
 		if (data.length > 0) {
 			const game = data[current].broadcast;
 			modalBody = (
-				<div class="broadcast-info">
+				<div className="broadcast-info">
 					<h2>Home</h2>
 					<p>Radio: {game.home.radio}</p>
 					<p>TV: {game.home.tv}</p>
@@ -91,6 +97,7 @@ export default class Menu extends React.Component {
 		} else {
 			modalBody = "";
 		}
+		
 
 		return (
 			<div className={`media-menu menu center ${selectedClass}`}>

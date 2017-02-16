@@ -37,6 +37,12 @@ body {
 	align-items: center;
 }
 
+#carousel {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
 .center {
 	position: absolute;
 	left: 50%;
