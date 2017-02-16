@@ -1,8 +1,8 @@
-const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+const ensureDigits = i => (i < 10 ? "0".concat(i.toString()) : i.toString());
 
 export const parseDate = date => ([
-	months[date.getMonth()],
-	date.getDate().toString(),
+	ensureDigits(date.getMonth()),
+	ensureDigits(date.getDate()),
 	date.getFullYear().toString()
 ]);
 
@@ -12,3 +12,9 @@ export const parseParams = () => {
 	const date = new Date(params);
 	return date.getDate() ? date : false;
 };
+
+export const shiftDate = (date, days) => {
+	const dup = new Date(date.getTime())
+	dup.setDate(date.getDate() + days)
+	return dup;
+}

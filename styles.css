@@ -5,11 +5,30 @@ body {
 	font-family: sans-serif;
 }
 
-.active img {	
+.current img {	
 	transform: scale(1.25, 1.25);
-	border: 2px solid white;
 	padding: 1px;
 	margin: 10px;
+}
+
+.thumbnail img {
+	max-width: 124px;
+	max-height: 70px;
+}
+ 
+#cursor {
+	border: 2px solid white;
+}
+
+.date-selector {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.date-selector > * {
+	box-sizing: border-box;
+	margin: 20px;
 }
 
 .menu {

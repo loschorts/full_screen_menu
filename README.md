@@ -12,13 +12,21 @@ a full screen menu in React
 # Day 2
 -[x] Carousel *
 -[x] Thumbnail / Highlight *
--[] Fix Off-Balance Carousel
+-[x] DateSwitch *
+-[x] cursor
+-[] Off-Balance Carousel bug
+-[x] Date parsing bugs
+-[] Cursor bug when menu not present
+-[x] large thumbnails bug (band-aid)
 
 # Day 3
 -[] Testing
 -[] Styling
--[x] DateSwitch *
 -[] Detail *
 -[] Transitions
 
 * React Component
+
+# Improvements
+-[] Reduxify game data, date
+-[] Control scheme
