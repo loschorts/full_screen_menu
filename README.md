@@ -12,16 +12,14 @@ http://fullscreenmenu.surge.sh
 
 # Timeline
 
-* React Component
-
-## Day 1
+**Day 1**
 -[x] Wireframes
 -[x] Environment Configuration
 -[x] Root *
 -[x] API Util
 -[x] OnPress Util
 
-## Day 2
+**Day 2**
 -[x] Date util
 -[x] Controls
 -[x] Menu *
@@ -35,8 +33,10 @@ http://fullscreenmenu.surge.sh
 -[x] Testing
 -[x] Styling
 
-## Day 3
+**Day 3**
 -[x] Off-Balance Carousel bug
+
+(*) indicates React Component
 
 # Improvements
 -[] Cross-browser support
