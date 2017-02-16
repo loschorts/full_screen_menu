@@ -13,28 +13,28 @@ http://fullscreenmenu.surge.sh
 # Timeline
 
 **Day 1**
--[x] Wireframes
--[x] Environment Configuration
--[x] Root *
--[x] API Util
--[x] OnPress Util
+- [x] Wireframes
+- [x] Environment Configuration
+- [x] Root *
+- [x] API Util
+- [x] OnPress Util
 
 **Day 2**
--[x] Date util
--[x] Controls
--[x] Menu *
--[x] Thumbnail *
--[x] DateSelector *
--[x] Modal *
--[x] cursor
--[x] Cursor bug when menu not present
--[x] large thumbnails bug (band-aid)
--[x] date bug (off by one)
--[x] Testing
--[x] Styling
+- [x] Date util
+- [x] Controls
+- [x] Menu *
+- [x] Thumbnail *
+- [x] DateSelector *
+- [x] Modal *
+- [x] cursor
+- [x] Cursor bug when menu not present
+- [x] large thumbnails bug (band-aid)
+- [x] date bug (off by one)
+- [x] Testing
+- [x] Styling
 
 **Day 3**
--[x] Off-Balance Carousel bug
+- [x] Off-Balance Carousel bug
 
 (*) indicates React Component
 
