@@ -5,3 +5,5 @@ Array.prototype.rotate = function (n) {
 		return this.slice(this.length + n).concat(this.slice(0, this.length + n))
 	}
 }
+
+console.log("hello mlbam team");
