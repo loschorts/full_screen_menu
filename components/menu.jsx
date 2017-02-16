@@ -30,6 +30,7 @@ export default class Menu extends React.Component {
 	}
 
 	componentWillReceiveProps(newProps){
+		// ensures cursor presence when navigating to a new day with fewer games
 		if (this.state.current >= newProps.data.length){
 			this.setState({current: 0});
 		}
@@ -66,6 +67,8 @@ export default class Menu extends React.Component {
 					key={`thumbnail-${i}`}/>
 				);
 		})
+
+		// #offset style is used to re-center unbalanced carousels
 		const offset = thumbs.length % 2 == 0 ? "offset" : "";
 
 		return (
@@ -78,7 +81,6 @@ export default class Menu extends React.Component {
 		const {data, selected} = this.props;
 		const {current} = this.state;
 		const selectedClass = selected ? "selected" : ""
-
 
 		let modalBody;
 		if (data.length > 0) {
@@ -97,7 +99,6 @@ export default class Menu extends React.Component {
 		} else {
 			modalBody = "";
 		}
-		
 
 		return (
 			<div className={`media-menu menu center ${selectedClass}`}>
@@ -111,4 +112,3 @@ export default class Menu extends React.Component {
 		);	
 	}
 }
-

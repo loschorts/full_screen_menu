@@ -8,9 +8,9 @@ export const parseDate = date => ([
 
 export const parseParams = () => {
 	const params = new URLSearchParams(window.location.search).get('date');
-	if (!params) return false;
+	if (!params) return undefined;
 	const date = new Date(params);
-	return date.getDate() ? date : false;
+	return date.getDate() ? date : undefined;
 };
 
 export const shiftDate = (date, days) => {

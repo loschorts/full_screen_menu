@@ -1,5 +1,4 @@
-// This could be better by handling errors, especially where the date given is
-// valid but not supported by the API, ex. 01, 01, 1911.
+// fetches API data and packages it for consumption by the front-end bundle
 
 export const getGames = (mm,dd,yyyy) => new Promise(resolve => {
 	fetch(url(mm,dd,yyyy))
@@ -26,7 +25,7 @@ export const getGames = (mm,dd,yyyy) => new Promise(resolve => {
 			reject("invalid data returned from API");
 		}
 	})
-	.catch(e => resolve([]))
+	.catch(e => resolve([])) // always return something to the component
 });
 
 const url = (mm,dd,yyyy) => (

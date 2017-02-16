@@ -19,24 +19,24 @@ class App extends React.Component {
 			hasContent: true
 		}
 	}
-	attachKeyListeners(){
+	assumeControls(){
 		onPress("ArrowUp", this.rotateActive.bind(this, 1));
 		onPress("ArrowDown", this.rotateActive.bind(this, -1));
 	}
-	detachKeyListeners(){
+	releaseControls(){
 		onPress("ArrowUp", undefined);
 		onPress("ArrowDown", undefined);
 	}
 	componentDidMount() {
 		this.getData();
-		this.attachKeyListeners();
+		this.assumeControls();
 	}
 	getData(date = this.state.date) {
 		getGames(...parseDate(date)).then(games => {
 			const hasContent = (games.length > 0);
 			const selected = hasContent ? this.state.selected : ["DateSelector", "Menu"]
 			this.setState({games, date, hasContent, selected}, ()=>{
-				this.state.hasContent ? this.attachKeyListeners() : this.detachKeyListeners();
+				this.state.hasContent ? this.assumeControls() : this.releaseControls();
 			});
 		});
 
@@ -46,6 +46,7 @@ class App extends React.Component {
 	}
 	render() {
 		const {date, games, selected, hasContent} = this.state;
+
 		let content;
 		if (hasContent) {
 			content = <Menu data={games} selected={selected[0] === "Menu"}/>

@@ -5,39 +5,11 @@ body {
 	font-family: sans-serif;
 }
 
-.current img {	
-	transform: scale(1.25, 1.25);
-	padding: 1px;
-	margin: 10px;
-}
-
-.thumbnail img {
-	width: 124px;
-	height: 70px;
-}
- 
 #cursor {
 	border: 2px solid white;
 }
 
-.date-selector {
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%);
-}
-
-.date-selector > * {
-	box-sizing: border-box;
-	margin: 20px;
-}
-
 .menu {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-#carousel {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -50,13 +22,45 @@ body {
 	transform: translate(-50%,-50%);
 }
 
+/*thumbnail styles*/
+
 .thumbnail {
 	left: 0;
 	margin: 5px;
 	transition: left 1s linear;
 }
 
-/*TODO: .thumbnail h1 centering is off for even numbered games, needs to be fixed*/
+.current img {	
+	transform: scale(1.25, 1.25);
+	padding: 1px;
+	margin: 10px;
+}
+
+.thumbnail img {
+	width: 124px;
+	height: 70px;
+}
+
+/*date selector styles*/
+
+.date-selector {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.date-selector > * {
+	box-sizing: border-box;
+	margin: 20px;
+}
+
+/*carousel styles*/
+
+#carousel {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 
 #carousel-header {
 	position: absolute;
@@ -70,6 +74,8 @@ body {
 	transform: translate(-50%);
 }
 
+/* offset handles centering menu on days with even no. of games */
+
 .offset {
 	transform: translate(calc(-50% - 67px), -50%);
 }
@@ -82,6 +88,8 @@ body {
 .offset #carousel-footer {
 	transform: translate(calc(-50% + 62px));
 }
+
+/*modal styles*/
 
 #modal {
 	position: absolute;
