@@ -47,15 +47,17 @@ export default class Menu extends React.Component {
 
 	thumbnails(){
 		const {data, selected} = this.props;
-		console.log(data)
 		const {current} = this.state;
 
 		const thumbs = data.map( (g, i) => {
+			const description = `
+			${g.homeCity} (${g.homeRecord}) hosts ${g.awayCity} (${g.awayRecord}) 
+			at ${g.venue} (${g.time}).`
 			return (
 				<Thumbnail 
 					src={g.thumbnail}
-					header={`${g.awayTeamName} vs. ${g.homeTeamName}`}
-					subhead={'blah blah blah'}
+					header={`${g.homeName} vs. ${g.awayName}`}
+					subhead={description}
 					current={ i === current }
 					cursor={ i === current && selected }
 					key={`thumbnail-${i}`}/>

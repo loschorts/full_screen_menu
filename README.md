@@ -15,9 +15,9 @@ a full screen menu in React
 -[x] DateSwitch *
 -[x] cursor
 -[] Off-Balance Carousel bug
--[x] Date parsing bugs
--[] Cursor bug when menu not present
+-[x] Cursor bug when menu not present
 -[x] large thumbnails bug (band-aid)
+-[x] date bug (off by one)
 
 # Day 3
 -[] Testing

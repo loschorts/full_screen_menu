@@ -2,6 +2,7 @@
 // valid but not supported by the API, ex. 01, 01, 1911.
 
 export const getGames = (mm,dd,yyyy) => new Promise(resolve => {
+	console.log(url(mm,dd,yyyy));
 	fetch(url(mm,dd,yyyy))
 	.then(r => r.json())
 	.then(json => {
@@ -9,8 +10,14 @@ export const getGames = (mm,dd,yyyy) => new Promise(resolve => {
 		if (games) {
 			const data = games.map((g,i) => {
 				return {
-					homeTeamName: g.home_team_name,
-					awayTeamName: g.away_team_name,
+					homeName: g.home_team_name,
+					awayName: g.away_team_name,
+					homeRecord: `${g.home_win}-${g.home_loss}`,
+					awayRecord: `${g.away_win}-${g.away_loss}`,
+					homeCity: g.home_team_city,
+					awayCity: g.away_team_city,
+					time: `${g.time} ${g.time_zone}`,
+					venue: g.venue,
 					thumbnail: g.video_thumbnails.thumbnail.filter( t => t.scenario === "7")[0].content,
 				};
 			});

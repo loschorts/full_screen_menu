@@ -50,13 +50,16 @@ body {
 	transition: left 1s linear;
 }
 
-/*TODO: .thumbnail h1 centering is off, needs to be fixed*/
+/*TODO: .thumbnail h1 centering is off for even numbered games, needs to be fixed*/
 
 .thumbnail h1 {
 	position: absolute;
-	transform: translate(-25%, -200%);
+	left: 50%;
+	transform: translate(-50%, -200%);
 }
 
 .thumbnail h2 {
 	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
 }

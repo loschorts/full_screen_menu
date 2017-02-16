@@ -1,7 +1,7 @@
 const ensureDigits = i => (i < 10 ? "0".concat(i.toString()) : i.toString());
 
 export const parseDate = date => ([
-	ensureDigits(date.getMonth()),
+	ensureDigits(date.getMonth() + 1),
 	ensureDigits(date.getDate()),
 	date.getFullYear().toString()
 ]);
