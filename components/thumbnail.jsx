@@ -6,8 +6,12 @@ class Thumbnail extends React.Component {
 		this.state = {
 			src: props.src
 		}
+		this.checkSrc = this.checkSrc.bind(this)
 	}
 	componentDidMount(){
+		this.checkSrc();
+	}
+	checkSrc(){
 		// check src and disable if 404
 		if (this.props.src) {
 			fetch(this.props.src)
@@ -17,20 +21,25 @@ class Thumbnail extends React.Component {
 			})
 		}
 	}
-	componentWillReceiveProps({ src }){
-		this.setState({ src })
-	}
 	render() {
 		const {header, subhead, current, cursor} = this.props;
 		const {src} = this.state;
 		let className = "thumbnail";
 		if (current) className += " current";
 
+		let thumbnail;
+
 		const id = cursor ? "cursor" : "";
+
+		if (src) {
+			thumbnail = <img id={id} className="thumb-img" src={src}/>
+		} else {
+			thumbnail = <img id={id} className="thumb-img" src={"thumb_not_found.png"}/>
+		}
 		return (
 			<div className={className}>
 				{current ? <h1 id="carousel-header">{header}</h1> : null}
-				<img id={id} className="thumb-img" src={src}/>
+				{thumbnail}
 				{current ? <h2 id="carousel-footer">{subhead}</h2> : null}
 			</div>
 		);

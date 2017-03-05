@@ -24,6 +24,7 @@ class App extends React.Component {
 			selected: ["Menu", "DateSelector"],
 			status: "fetching"
 		}
+		this.getData = this.getData.bind(this);
 	}
 	setToggleable(){
 		onPress("ArrowUp", this.rotateActive.bind(this, 1));

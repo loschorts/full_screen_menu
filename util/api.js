@@ -4,9 +4,14 @@ export const getGames = (mm,dd,yyyy) => {
 	return fetch(url(mm,dd,yyyy))
 	.then(r => r.json())
 	.then(json => {
-		let games = json.data.games.game;
-		console.log(games)
-		if (!games) return [];
+		let games;
+		try {
+			games = json.data.games.game;
+		} catch (e) {
+			debugger
+			console.error("Unexpected Response", json)
+			throw 'Unexpected Response';
+		}
 		if (!(games.constructor === Array)) games = [games]
 		return games.map(game => formatGame(game))
 	})
@@ -15,6 +20,7 @@ export const getGames = (mm,dd,yyyy) => {
 // helper methods
 
 const formatGame = game => ({
+	id: game.id,
 	homeName: ensureString(game.home_team_name),
 	awayName: ensureString(game.away_team_name),
 	homeRecord: `${ensureString(game.home_win)}-${ensureString(game.home_loss)}`,
@@ -40,16 +46,19 @@ const getThumbnail = game => {
 	}
 }
 
-const getBroadcast = broadcast => ({
-	home: {
-		tv: ensureString(broadcast.home.tv),
-		radio: ensureString(broadcast.home.radio)
-	},
-	away: {
-		tv: ensureString(broadcast.away.tv),
-		radio: ensureString(broadcast.away.radio)
+const getBroadcast = broadcast => {
+	if (!broadcast) return {home: {tv: "", radio: ""}, away: {tv: "", radio:""}}
+	return {
+		home: {
+			tv: ensureString(broadcast.home.tv),
+			radio: ensureString(broadcast.home.radio)
+		},
+		away: {
+			tv: ensureString(broadcast.away.tv),
+			radio: ensureString(broadcast.away.radio)
+		}
 	}
-})
+}
 
 const ensureString = object => (
 	(object && object.constructor === String) ? object : ""

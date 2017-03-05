@@ -64,7 +64,7 @@ export default class Menu extends React.Component {
 					subhead={description}
 					current={ i === current }
 					cursor={ i === current && selected }
-					key={`thumbnail-${i}`}/>
+					key={`thumbnail-${g.id}`}/>
 				);
 		})
 
