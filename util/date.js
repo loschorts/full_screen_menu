@@ -1,15 +1,16 @@
 const ensureDigits = i => (i < 10 ? "0".concat(i.toString()) : i.toString());
 
 export const parseDate = date => ([
-	ensureDigits(date.getMonth() + 1),
+	ensureDigits(date.getMonth() + 1), // +1 b/c of indexing mismatch b/tw API and Date class
 	ensureDigits(date.getDate()),
 	date.getFullYear().toString()
 ]);
 
 export const parseParams = () => {
-	const params = new URLSearchParams(window.location.search).get('date');
-	if (!params) return undefined;
-	const date = new Date(params);
+	const dateParam = new URLSearchParams(window.location.search).get('date');
+	if (!dateParam) return;
+	const date = new Date(dateParam);
+	// getDate() will return NaN for invalid dates
 	return date.getDate() ? date : undefined;
 };
 
