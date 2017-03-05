@@ -2,7 +2,7 @@
 
 A full screen carousel menu with date selector in React.
 
-[**revised version available**](https://github.com/loschorts/full_screen_menu/tree/revisions)
+[**REVISED VERSION AVAILABLE**](https://github.com/loschorts/full_screen_menu/tree/revisions)
 
 # To Run
 
