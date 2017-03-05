@@ -2,6 +2,8 @@
 
 A full screen carousel menu with date selector in React.
 
+**[revised version available]**(/loschorts/full_screen_menu/tree/revisions)
+
 # To Run
 
 **Supported Browers:** Chrome, Opera
