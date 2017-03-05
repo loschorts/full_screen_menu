@@ -15,8 +15,8 @@ export default class Menu extends React.Component {
 	}
 
 	assumeControls(){
-		onPress("ArrowRight", this.rotate.bind(this, -1));
-		onPress("ArrowLeft", this.rotate.bind(this, 1));
+		onPress("ArrowLeft", this.rotate.bind(this, -1));
+		onPress("ArrowRight", this.rotate.bind(this, 1));
 		onPress(" ", this.select.bind(this));
 		onPress("Enter", this.select.bind(this));
 	}
@@ -102,12 +102,12 @@ export default class Menu extends React.Component {
 
 		return (
 			<div className={`media-menu menu center ${selectedClass}`}>
-			{this.thumbnails()}
-			<GameModal 
-				open={this.state.modalOpen}
-				header="Broadcast Options"
-				body={modalBody}
-				/>
+				{this.thumbnails()}
+				<GameModal 
+					open={this.state.modalOpen}
+					header="Broadcast Options"
+					body={modalBody}
+					/>
 			</div>
 		);	
 	}

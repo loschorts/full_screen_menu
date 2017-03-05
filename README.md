@@ -38,6 +38,12 @@ A full screen carousel menu with date selector in React.
 **Day 3**
 - [x] Off-Balance Carousel bug
 
+**Day 4**
+- [x] Add Network Error Message
+- [x] API broadcast contains objects where strings expected bug
+- [] API thumbnail data 404s
+- [] Reverse direction of menu scroll
+
 (*) indicates React Component
 
 # Improvements
