@@ -2,6 +2,13 @@
 
 A full screen carousel menu with date selector in React.
 
+# Key Changes
+
+- `util/api.js` now includes more robust error handling for unexpected API responses.
+- `menu.jsx` now displays a message when the app is unable to handle the API response.
+- Missing thumbnail and broadcast data no longer results in a `no games found` message, and placeholders are inserted where appropriate.
+- Left and Right arrow key UX is reversed.
+
 # To Run
 
 **Supported Browers:** Chrome, Opera
