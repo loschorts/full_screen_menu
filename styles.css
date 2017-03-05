@@ -31,15 +31,19 @@ body {
 	transition: left 1s linear;
 }
 
-.current img {	
+.current .thumb-img {	
 	transform: scale(1.25, 1.25);
 	padding: 1px;
 	margin: 10px;
 }
 
-.thumbnail img {
+.thumb-img {
 	width: 124px;
 	height: 70px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
 
 /*date selector styles*/
