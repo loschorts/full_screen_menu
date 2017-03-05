@@ -5,7 +5,7 @@ export const getGames = (mm,dd,yyyy) => {
 	.then(r => r.json())
 	.then(json => {
 		try {
-			let games = json.data.games.game;
+			let games = json.data.games.game; // raises error if response shape unexpected
 			if (!games) games = []; // no games received
 			if (games.constructor === Object) games = [games]; // one game received
 			return games.map(game => formatGame(game))
