@@ -58,7 +58,6 @@ class App extends React.Component {
 				this.setState({games, date, status, selected});
 			},
 			error => {
-				console.error(error);
 				this.setState({status: STATUS.error})
 			}
 		)
