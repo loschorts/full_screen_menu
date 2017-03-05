@@ -71,6 +71,7 @@ body {
 
 #carousel-footer {
 	position: absolute;
+	width: 50vw;
 	left: 50%;
 	transform: translate(-50%);
 }
