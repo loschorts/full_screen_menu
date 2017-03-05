@@ -4,10 +4,15 @@ export const getGames = (mm,dd,yyyy) => {
 	return fetch(url(mm,dd,yyyy))
 	.then(r => r.json())
 	.then(json => {
-		let games = json.data.games.game;
-		if (!games) games = []; // no games received
-		if (games.constructor === Object) games = [games]; // one game received
-		return games.map(game => formatGame(game))
+		try {
+			let games = json.data.games.game;
+			if (!games) games = []; // no games received
+			if (games.constructor === Object) games = [games]; // one game received
+			return games.map(game => formatGame(game))
+		}
+		catch (e) {
+			throw 'Unexpected API response received'
+		}
 	})
 }
 
