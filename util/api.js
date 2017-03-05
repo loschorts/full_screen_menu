@@ -19,7 +19,7 @@ export const getGames = (mm,dd,yyyy) => {
 // helper methods
 
 const formatGame = game => ({
-	id: game.id,
+	id: ensureString(game.id),
 	homeName: ensureString(game.home_team_name),
 	awayName: ensureString(game.away_team_name),
 	homeRecord: `${ensureString(game.home_win)}-${ensureString(game.home_loss)}`,
