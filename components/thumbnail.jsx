@@ -34,7 +34,7 @@ class Thumbnail extends React.Component {
 		if (src) {
 			thumbnail = <img id={id} className="thumb-img" src={src}/>
 		} else {
-			thumbnail = <div id={id} className="thumb-img">No Thumbnail Provided.</div>
+			thumbnail = <div id={id} className="thumb-img">Preview not available.</div>
 		}
 		return (
 			<div className={className}>
