@@ -10,9 +10,9 @@ A full screen carousel menu with date selector in React.
 
 **Controls:** Arrow Keys, Space/Enter
 
-**Home:** http://fullscreenmenu.surge.sh
+**Home:** http://fullscreenmenu2.surge.sh
 
-**Non-empty:** http://fullscreenmenu.surge.sh?date=5-20-2016
+**Non-empty:** http://fullscreenmenu2.surge.sh?date=5-20-2016
 
 # Timeline
 
