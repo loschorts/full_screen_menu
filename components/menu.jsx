@@ -83,29 +83,30 @@ export default class Menu extends React.Component {
 		const selectedClass = selected ? "selected" : ""
 
 		let modalBody;
+		const game = data[current];
+
 		if (data.length > 0) {
-			const game = data[current].broadcast;
+			const broadcast = game.broadcast;
 			modalBody = (
 				<div className="broadcast-info">
 					<h2>Home</h2>
-					<p>Radio: {game.home.radio}</p>
-					<p>TV: {game.home.tv}</p>
+					<p>Radio: {broadcast.home.radio}</p>
+					<p>TV: {broadcast.home.tv}</p>
 
 					<h2>Away</h2>
-					<p>Radio: {game.away.radio}</p>
-					<p>TV: {game.away.tv}</p>
+					<p>Radio: {broadcast.away.radio}</p>
+					<p>TV: {broadcast.away.tv}</p>
 				</div>
 			)
 		} else {
 			modalBody = "";
 		}
-
 		return (
 			<div className={`media-menu menu center ${selectedClass}`}>
 				{this.thumbnails()}
 				<GameModal 
 					open={this.state.modalOpen}
-					header="Broadcast Options"
+					header={`${game.homeName} vs. ${game.awayName}`}
 					body={modalBody}
 					/>
 			</div>
